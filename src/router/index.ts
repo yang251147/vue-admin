@@ -35,7 +35,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory("/admin/"),
+  history: createWebHashHistory(), //"/admin/"
   routes,
 });
 // router.beforeEach((to, from, next) => {
