@@ -4,9 +4,22 @@ import Layout from "../layout/index.vue";
 const routes = [
   {
     path: "/",
+    redirect: "/dashboard",
+  },
+  {
+    path: "/",
     name: "Home",
     component: Layout,
     children: [
+      {
+        path: "/dashboard",
+        name: "dashboard",
+        meta: {
+          title: "系统首页",
+        },
+        component: () =>
+          import(/* webpackChunkName: "dashboard" */ "@/views/Dashboard.vue"),
+      },
       {
         path: "home",
         name: "Home",
@@ -32,10 +45,16 @@ const routes = [
     meta: { title: "登录" },
     component: () => import("../views/Login/index.vue"),
   },
+  {
+    path: "/register",
+    name: "Register",
+    meta: { title: "注册" },
+    component: () => import("../views/Login/register.vue"),
+  },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(), //"/admin/"
+  history: createWebHashHistory(),
   routes,
 });
 // router.beforeEach((to, from, next) => {

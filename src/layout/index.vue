@@ -3,7 +3,7 @@
     <el-header height="70px">
       <el-row class="admin-header">
         <el-col :span="4">
-          <img src="../assets/logo.png" alt="" width="30" />
+          <img src="../assets/img" alt="" width="30" />
         </el-col>
         <el-col :span="16"><h2>后台管理系统</h2></el-col>
         <el-col :span="4"></el-col>
@@ -12,12 +12,16 @@
     <el-container>
       <Menu></Menu>
       <el-container>
-        <el-main>
-          <router-view></router-view>
-        </el-main>
-        <el-footer>
+        <div class="content-box">
+          <navbar></navbar>
+          <v-tags></v-tags>
+          <div class="content">
+            <router-view> </router-view>
+          </div>
+        </div>
+        <!-- <el-footer>
           <Footer></Footer>
-        </el-footer>
+        </el-footer> -->
       </el-container>
     </el-container>
   </el-container>
@@ -26,9 +30,11 @@
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
 // import * as echarts from "echarts";
-import Menu from "../components/Menu/index.vue";
+import Menu from "@/components/Menu/index.vue";
 import Header from "../components/Header/index.vue";
 import Footer from "../components/Footer/index.vue";
+import Navbar from "../components/Navbar/index.vue";
+import vTags from "../components/Tags.vue";
 export default defineComponent({
   setup() {
     // onMounted(() => {
@@ -55,7 +61,7 @@ export default defineComponent({
     // });
     return {};
   },
-  components: { Menu, Header, Footer },
+  components: { Menu, Header, Footer, vTags, Navbar },
 });
 </script>
 <style>
@@ -64,7 +70,7 @@ html body {
   padding: 0;
 }
 </style>
-<style scoped> 
+<style scoped>
 .admin-header {
   align-items: center;
 }

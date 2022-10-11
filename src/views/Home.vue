@@ -1,5 +1,5 @@
-<template>
-  <router-view></router-view>
+<template> 
+啊实打实大大
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";

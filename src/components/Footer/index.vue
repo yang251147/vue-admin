@@ -1,7 +1,5 @@
 <template>
-   <div>
-       asdsad
-   </div>
+  <div>footer</div>
 </template>
 
 <script lang="ts">

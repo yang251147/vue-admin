@@ -1,4 +1,5 @@
-function getToken(): String {
-    return "";
+import { localGet } from "./index";
+
+export function getUser(key) {
+  return localGet(key);
 }
-export { getToken }
