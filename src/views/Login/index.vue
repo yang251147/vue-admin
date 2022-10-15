@@ -29,7 +29,7 @@
         </el-form>
       </div>
       <div class="msg">
-        Don't have account?
+        没有账户?
         <a href="./#/register">注册</a>
       </div>
     </div>

@@ -1,3 +1,9 @@
+/*
+ * @Author: lyang 
+ * @Date: 2022-10-15 11:25:24 
+ * @Last Modified by:   lyang 
+ * @Last Modified time: 2022-10-15 11:25:24 
+ */
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Layout from "../layout/index.vue";
